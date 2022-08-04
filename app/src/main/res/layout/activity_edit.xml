@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="#1F0149"
+    tools:context=".editActivity">
+
+    <EditText
+        android:background="@drawable/task_back_ground"
+        android:id="@+id/newText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="the old text"
+        android:enabled="false"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/teal_200"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <NumberPicker
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+           />
+
+        <NumberPicker
+            android:id="@+id/states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update"
+        android:background="@drawable/task_back_ground"
+        android:textColor="@color/teal_200"
+        android:layout_margin="10dp"
+        android:visibility="invisible"/>
+</LinearLayout>
