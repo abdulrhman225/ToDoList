@@ -5,21 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FF1F0149"
     android:gravity="center"
-    tools:context=".CreatingListActivity">
+    tools:context=".Ui.CreatingListActivity">
 
     <EditText
         android:id="@+id/missionPlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:gravity="center"
-        android:hint="Write you taske here"
-        android:background="@drawable/task_back_ground"
-        android:textColor="@color/teal_200"
-        android:textColorHint="@color/teal_200"
-        android:minHeight="48dp" />
+        android:paddingLeft="@dimen/_10sdp"
+        android:hint="Write you task here"
+        android:minHeight="@dimen/_48sdp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,19 +25,19 @@
             android:id="@+id/hours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
+            android:layout_margin="@dimen/_10sdp"/>
 
         <NumberPicker
             android:id="@+id/minutes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
+            android:layout_margin="@dimen/_10sdp"/>
 
         <NumberPicker
             android:id="@+id/state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
+            android:layout_margin="@dimen/_10sdp"/>
 
 
     </LinearLayout>
@@ -50,10 +46,9 @@
         android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="Save The Task"
-        android:background="@drawable/task_back_ground"
-        android:textColor="@color/teal_200"
+        android:layout_margin="@dimen/_15sdp"
         android:textAllCaps="false"
-        android:textSize="20sp" />
+        android:text="save"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"/>
 </LinearLayout>

@@ -1,13 +1,14 @@
-package com.example.todolist;
+package com.example.todolist.model;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.todolist.R;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class CustomDoList extends RecyclerView.Adapter<CustomDoList.DoListPlaceH
         this.tasks = tasks;
     }
 
-    onItemClick onItemClick;
+    com.example.todolist.model.onItemClick onItemClick;
 
 
     public CustomDoList (ArrayList<task> tasks , onItemClick onItemClick ){
@@ -40,8 +41,10 @@ public class CustomDoList extends RecyclerView.Adapter<CustomDoList.DoListPlaceH
         task task = tasks.get(position);
 
         holder.tv_time.setText(task.getTime());
-        holder.checkBox_task.setText(task.getTask());
+        holder.switch_task.setText(task.getTask());
         holder.tv_time.setTag(task.getId());
+
+
     }
 
     @Override
@@ -51,12 +54,12 @@ public class CustomDoList extends RecyclerView.Adapter<CustomDoList.DoListPlaceH
 
     public class DoListPlaceHolder extends RecyclerView.ViewHolder {
         TextView tv_time;
-        CheckBox checkBox_task;
+        TextView switch_task;
         public DoListPlaceHolder(@NonNull View itemView) {
             super(itemView);
 
             tv_time = itemView.findViewById(R.id.CustomTextView);
-            checkBox_task = itemView.findViewById(R.id.custom_CheckBox);
+            switch_task = itemView.findViewById(R.id.custom_switch);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

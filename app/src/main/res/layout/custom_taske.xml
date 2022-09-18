@@ -2,33 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:background="@drawable/task_back_ground"
-    android:padding="10dp"
+    android:layout_margin="@dimen/_5sdp"
+    android:padding="@dimen/_5sdp"
     >
 
 
-    <CheckBox
-        android:id="@+id/custom_CheckBox"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/custom_switch"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="3"
-        android:text="CheckBox"
-        android:textColor="@color/teal_200"
-        android:textDirection="ltr"
-        android:textSize="24sp" />
+        android:text="TextView"
+        android:textSize="@dimen/_18sdp"
+        />
+
+
 
     <TextView
         android:id="@+id/CustomTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp"
         android:text="TextView"
-        android:textSize="24sp"
-        android:textColor="@color/teal_200"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"/>
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+
 
 
 </LinearLayout>

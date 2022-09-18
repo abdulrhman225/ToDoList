@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.Ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -20,6 +20,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
+import com.example.todolist.AlarmService;
+import com.example.todolist.model.DataBase;
+import com.example.todolist.R;
+import com.example.todolist.model.task;
+
 import java.util.Calendar;
 
 public class editActivity extends AppCompatActivity {
@@ -28,7 +33,7 @@ public class editActivity extends AppCompatActivity {
     NumberPicker hours , minutes , state;
     Button btn_update;
     DataBase db  ;
-    task task;
+    com.example.todolist.model.task task;
     String tasks;
     String time;
     int id;
@@ -75,7 +80,6 @@ public class editActivity extends AppCompatActivity {
         hours.setMaxValue(12);
         hours.setValue(hou);
         hours.setEnabled(false);
-        hours.setBackgroundColor(getResources().getColor(R.color.teal_200));
 
 
 
@@ -87,7 +91,6 @@ public class editActivity extends AppCompatActivity {
         minutes.setMinValue(0);
         minutes.setValue(minu);
         minutes.setEnabled(false);
-        minutes.setBackgroundColor(getResources().getColor(R.color.teal_200));
 
 
         String sta = time.substring(mi+1);
@@ -102,7 +105,6 @@ public class editActivity extends AppCompatActivity {
         state.setMaxValue(1);
         state.setDisplayedValues(states);
         state.setEnabled(false);
-        state.setBackgroundColor(getResources().getColor(R.color.teal_200));
 
 
         et_task.setText(tasks);
@@ -185,7 +187,7 @@ public class editActivity extends AppCompatActivity {
         Intent intent = new Intent(this , AlarmService.class);
         penIn = PendingIntent.getBroadcast(this , 0 , intent , 0);
 
-        alarmManger.setInexactRepeating(AlarmManager.RTC_WAKEUP , calendar.getTimeInMillis() , AlarmManager.INTERVAL_DAY , penIn);
+        alarmManger.setExact(AlarmManager.RTC_WAKEUP , calendar.getTimeInMillis()  , penIn);
 
     }
 

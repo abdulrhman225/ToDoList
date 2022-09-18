@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FF1F0149">
+    tools:context=".Ui.MainActivity"
+>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -19,13 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="19dp"
-        android:background="#FF1F0149"
+        android:layout_marginStart="@dimen/_19sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
         android:clickable="true"
-
         app:srcCompat="@drawable/ic_baseline_add_24"
         tools:ignore="SpeakableTextPresentCheck" />
 

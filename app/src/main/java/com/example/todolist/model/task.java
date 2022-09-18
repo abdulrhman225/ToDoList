@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.model;
 
 public class task {
     String time;

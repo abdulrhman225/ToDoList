@@ -1,4 +1,4 @@
-package com.example.todolist;
+package com.example.todolist.Ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.todolist.model.CustomDoList;
+import com.example.todolist.model.DataBase;
+import com.example.todolist.R;
+import com.example.todolist.model.onItemClick;
+import com.example.todolist.model.task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -57,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         fab_newTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),CreatingListActivity.class);
+                Intent intent = new Intent(getBaseContext(), CreatingListActivity.class);
                 startActivity(intent);
 
             }
