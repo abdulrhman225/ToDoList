@@ -184,9 +184,12 @@ public class editActivity extends AppCompatActivity {
 
         alarmManger = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        Intent intent = new Intent(this , AlarmService.class);
-        penIn = PendingIntent.getBroadcast(this , 0 , intent , 0);
 
+        if (calendar.getTimeInMillis() == System.currentTimeMillis()) {
+
+            Intent intent = new Intent(this, AlarmService.class);
+            penIn = PendingIntent.getBroadcast(this, 0, intent, 0);
+        }
         alarmManger.setExact(AlarmManager.RTC_WAKEUP , calendar.getTimeInMillis()  , penIn);
 
     }

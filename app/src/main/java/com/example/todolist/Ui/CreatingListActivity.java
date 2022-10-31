@@ -112,13 +112,15 @@ public class CreatingListActivity extends AppCompatActivity {
 
         alarmManger = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        Intent intent = new Intent(this, AlarmService.class);
-        penIn = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+            Intent intent = new Intent(this, AlarmService.class);
+            penIn = PendingIntent.getBroadcast(this, 0, intent, 0);
 
         alarmManger.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), penIn);
     }
 
     public void CreateNotification() {
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String description = "Task is Ready Task";
